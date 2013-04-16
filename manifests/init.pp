@@ -4,13 +4,14 @@
 
 class play {
   require homebrew
-  $version = '2.1.0-boxen1' 
+  $version = "2.1.0-boxen1" 
+
   homebrew::formula { "play":
     before => Package["boxen/brews/play"],
-    source => "puppet:///modules/play/brews/play.rb"
+    source => "puppet:///modules/play/brews/play.rb",
   }
 
-  Package { "boxen/brews/play":
+  package { "boxen/brews/play":
     ensure => "${version}",
   }
 
