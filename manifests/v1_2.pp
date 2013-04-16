@@ -11,7 +11,7 @@ class play::v1_2 {
     source => "puppet:///modules/play/brews/play12.rb"
   }
 
-  package { "boxen/brews/play":
+  package { "boxen/brews/play12":
     ensure => "${version}",
   }
  
