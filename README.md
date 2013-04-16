@@ -1,9 +1,7 @@
 
 # Puppet Module for Play
 
-Installs play framework.
-
-[![Build Status](https://travis-ci.org/boxen/puppet-template.png?branch=master)](https://travis-ci.org/boxen/puppet-template)
+Installs play framework. This version supports play 2.1.0 and play 1.2.5.
 
 ## Usage
 
