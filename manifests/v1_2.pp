@@ -1,10 +1,10 @@
-# Installs play 1.2.5.
+# Installs play 1.2.7.
 # Usage
 #    include play::v1_2
 
 class play::v1_2 {
   require homebrew
-  $version = '1.2.5-boxen1'
+  $version = '1.2.7-boxen1'
 
   homebrew::formula { "play12":
     before => Package["boxen/brews/play12"],
