@@ -20,7 +20,8 @@ class play::v1_2 {
     target => "../Cellar/play12/${version}/bin/play",
   }
 
-  file { "${boxen::config::homebrewdir}/bin/play":
+  file { "play1executable":
+    path => "${boxen::config::homebrewdir}/bin/play",
     ensure => 'absent',
     require => Package["boxen/brews/play12"]
   }
