@@ -14,7 +14,7 @@ describe 'play' do
   it do
     should contain_homebrew__formula('play').with_before('Package[boxen/brews/play]')
     should contain_package('boxen/brews/play').with({
-      :ensure => '2.1.0-boxen1',
+      :ensure => '2.1.1-boxen1',
     })
   end
 end

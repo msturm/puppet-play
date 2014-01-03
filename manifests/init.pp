@@ -4,7 +4,7 @@
 
 class play {
   require homebrew
-  $version = "2.1.0-boxen1" 
+  $version = "2.1.1-boxen1" 
 
   homebrew::formula { "play":
     before => Package["boxen/brews/play"],
