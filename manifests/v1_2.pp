@@ -28,6 +28,6 @@ class play::v1_2 {
   # Remove older version of play12
   file { "${boxen::config::homebrewdir}/Cellar/play12/1.2.5-boxen1":
     ensure => 'absent',
-    recuse => 'true'
+    recurse => 'true'
   }
 }
