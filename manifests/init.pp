@@ -17,7 +17,22 @@ class play {
 
   file { "${boxen::config::homebrewdir}/bin/play2":
     ensure => 'link',
-    target => "${boxen::config::homebrewdir}/Cellar/play/${version}/bin/play",
+    target => "../Cellar/play/${version}/bin/play",
+  }
+
+  file { "${boxen::config::homebrewdir}/bin/play21":
+    ensure => 'link',
+    target => "../Cellar/play/${version}/bin/play",
+  }
+
+  file { "${boxen::config::homebrewdir}/bin/play211":
+    ensure => 'link',
+    target => "../Cellar/play/${version}/bin/play",
+  }
+
+  # unlink play with brew, because we want to create our own symlinks
+  exec { "${boxen::config::homebrewdir}/bin/brew unlink play":
+    require => Package["boxen/brews/play"]
   }
 }
 

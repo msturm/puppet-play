@@ -17,6 +17,10 @@ class play::v1_2 {
  
   file { "${boxen::config::homebrewdir}/bin/play1":
     ensure => 'link',
-    target => "${boxen::config::homebrewdir}/Cellar/play12/${version}/bin/play",
+    target => "../Cellar/play12/${version}/bin/play",
+  }
+
+  exec { "${boxen::config::homebrewdir}/bin/brew unlink play12":
+    require => Package["boxen/brews/play12"]
   }
 }
