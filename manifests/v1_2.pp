@@ -21,7 +21,7 @@ class play::v1_2 {
   }
 
   # unlink play with brew, because we want to create our own symlinks
-  exec { "${boxen::config::homebrewdir}/bin/brew unlink play":
+  exec { "${boxen::config::homebrewdir}/bin/brew unlink play12":
     require => Package["boxen/brews/play12"]
   }
 
