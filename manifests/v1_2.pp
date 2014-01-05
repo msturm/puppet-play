@@ -25,6 +25,10 @@ class play::v1_2 {
     require => Package["boxen/brews/play12"]
   }
 
+  exec { "${boxen::config::homebrewdir}/bin/play1 install scala":
+    require => Package["boxen/brews/play12"]
+  }
+
   # Remove older version of play12
   file { "${boxen::config::homebrewdir}/Cellar/play12/1.2.5-boxen1":
     ensure => 'absent',
