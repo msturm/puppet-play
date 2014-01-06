@@ -26,7 +26,7 @@ class play::v1_2 {
     onlyif => "/bin/ls ${boxen::config::homebrewdir}/bin/play"
   }
 
-  exec { "/bin/sh -c '/bin/echo 'y' | ${boxen::config::homebrewdir}/bin/play1 install scala-0.9":
+  exec { "/bin/sh -c \"/bin/echo 'y' | ${boxen::config::homebrewdir}/bin/play1 install scala-0.9\"":
     require => Package["boxen/brews/play12"]
   }
 
