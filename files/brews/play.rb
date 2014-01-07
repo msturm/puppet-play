@@ -4,7 +4,9 @@ class Play < Formula
   homepage 'http://www.playframework.org/'
   url 'http://downloads.typesafe.com/play/2.1.1/play-2.1.1.zip'
   sha1 '3b1a0c3ca23dde36113d935b85d7f4d45f05923b'
+
   version '2.1.1-boxen1'
+  keg_only "We create the links our selves with puppet"
 
   head 'https://github.com/playframework/Play20.git'
 

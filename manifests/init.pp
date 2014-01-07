@@ -30,9 +30,10 @@ class play {
     target => "../Cellar/play/${version}/bin/play",
   }
 
+  # this should not be necessary anymore since we changed the formula
   # unlink play with brew, because we want to create our own symlinks
-  exec { "${boxen::config::homebrewdir}/bin/brew unlink play":
-    require => Package["boxen/brews/play"]
-  }
+  #exec { "${boxen::config::homebrewdir}/bin/brew unlink play":
+  #  require => Package["boxen/brews/play"]
+  #}
 }
 

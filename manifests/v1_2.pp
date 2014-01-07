@@ -20,11 +20,12 @@ class play::v1_2 {
     target => "../Cellar/play12/${version}/bin/play",
   }
 
+# this should not be necessary anymore, since we changed the formula
   # unlink play with brew, because we want to create our own symlinks
-  exec { "${boxen::config::homebrewdir}/bin/brew unlink play12":
-    require => Package["boxen/brews/play12"],
-    onlyif => "/bin/ls ${boxen::config::homebrewdir}/bin/play"
-  }
+#  exec { "${boxen::config::homebrewdir}/bin/brew unlink play12":
+#    require => Package["boxen/brews/play12"],
+#    onlyif => "/bin/ls ${boxen::config::homebrewdir}/bin/play"
+#  }
 
   exec { "/bin/sh -c \"/bin/echo 'y' | ${boxen::config::homebrewdir}/bin/play1 install scala-0.9\"":
     require => Package["boxen/brews/play12"]
