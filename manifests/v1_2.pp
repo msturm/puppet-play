@@ -28,7 +28,9 @@ class play::v1_2 {
 #  }
 
   exec { "/bin/sh -c \"/bin/echo 'y' | ${boxen::config::homebrewdir}/bin/play1 install scala-0.9\"":
-    require => Package["boxen/brews/play12"]
+    require => Package["boxen/brews/play12"],
+    unless => "/bin/ls -d ${boxen::config::homebrewdir}/Cellar/play12/1.2.7-boxen1/libexec/modules/scala-0.9",
+    timeout => 900  
   }
 
   # Remove older version of play12
